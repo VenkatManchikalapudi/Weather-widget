@@ -1,0 +1,17 @@
+<div class="widget">
+  <div class="widget-location">{{weatherLocation}}</div>
+  <div class="widget-conditions">
+    <span class="conditions-temperature">{{temperature + '&deg;'}}</span>
+    <div class="conditions-details">
+      <img src="{{'http://l.yimg.com/a/i/us/we/52/' + conditionImgCode + '.gif'}}" title="{{conditions}}" class="conditions-img">
+      <span class="conditions-text">{{conditions}}</span>
+    </div>
+  </div>
+  <div class="widget-forecast">
+    <div class="forecast-item" ng-repeat="forecastItem in forecast">
+      <div class="forecast-item-day">{{forecastItem.day}}</div>
+      <div class="forecast-item-temp">{{forecastItem.high + '&deg;' + '/' + forecastItem.low + '&deg;'}} </div>
+    </div>
+
+  </div>
+</div>
